@@ -1,11 +1,11 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+package sortLearn;
 
-public class SortLearn {
+import java.util.Arrays;
+
+public class InsertionSort implements IMutableSorter {
 
     //插入排序
-    void insertionSort(int[] arr){
+    public void sort(int[] arr){
         for(int i=1;i<arr.length;i++){
             //c是需要插入有序数组中的牌
             int c = arr[i];
@@ -60,8 +60,8 @@ public class SortLearn {
 
     public static void main(String[] args) {
         int[] arr = {8, 1, 3, 6, 7, 2, 9, 4, 5};
-        SortLearn sortLearn = new SortLearn();
-        sortLearn.selectionSort(arr);
+        InsertionSort insertionSort = new InsertionSort();
+        insertionSort.selectionSort(arr);
         Arrays.stream(arr).boxed().forEach(System.out::print);
     }
 
